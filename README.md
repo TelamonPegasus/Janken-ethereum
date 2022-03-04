@@ -4,7 +4,7 @@
 
 ![janken](img/demo.gif)
 
-Ropsten テストネットにデプロイしたじゃんけんコントラクトをつかった Dapps です。
+Ropsten テストネットにデプロイしたじゃんけんコントラクトをつかった DApps です。
 
 独自のトークンであるRSP(RockScissorsPaper) をベットしてプレイできます。
 
@@ -14,7 +14,7 @@ Ropsten テストネットにデプロイしたじゃんけんコントラクト
 
 ## 遊び方
 
-- Chrome Addon で Metamask をインストールする
+- Chrome Addon で MetaMask をインストールする
 - Metamask にログインする
 - 使用するネットワークを `Ropsten テストネット` にする
 - `Ropsten テストネット` の ETH を faucet サイトで取得する
