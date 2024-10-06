@@ -1,6 +1,6 @@
 # じゃんけん on Ethereum
 
-**Demo**
+**lirlia/Telamon**
 
 ![janken](img/demo.gif)
 
@@ -8,9 +8,6 @@ Ropsten テストネットにデプロイしたじゃんけんコントラクト
 
 独自のトークンであるRSP(RockScissorsPaper) をベットしてプレイできます。
 
-プレイはこちら
-
-- [じゃんけん](https://lirlia.github.io/Rock-paper-scissors-ethereum/)
 
 ## 遊び方
 
