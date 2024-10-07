@@ -10,8 +10,6 @@ contract Rsp is Base, ERC20 {
 
     mapping(address => Score) public scoreOfOwner;
 
-    constructor() ERC20("Janken", "RSP") {}
-
     event TokenNotification(uint token);
     event ResultNotification(Results result, uint earnToken, uint totalToken, Hands playerHand, Hands cpuHand, Score score);
 
@@ -72,14 +70,12 @@ contract Rsp is Base, ERC20 {
             // player が勝利した場合は 2倍の token を渡す
             earnToken = _sendRewardToken(token);
             scoreOfOwner[msg.sender].winCount++;
-
+        } else if (result == Results.Draw) {
+            scoreOfOwner[msg.sender].drawCount++;
         } else if (result == Results.Lose) {
             // 負けた場合は掛け金を没収する
             transfer(address(this), token);
             scoreOfOwner[msg.sender].loseCount++;
-
-        } else if (result == Results.Draw) {
-            scoreOfOwner[msg.sender].drawCount++;
         }
 
         console.log("player hand: '%d / computer hand: '%d' / result: '%d'",
