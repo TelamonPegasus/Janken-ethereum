@@ -25,17 +25,17 @@ contract Rsp is Base, ERC20 {
     }
 
     // じゃんけんの手を比較して判定を行う
-    function _checkResult(Hands player, Hands computer) internal pure returns(Results) {
+    function _checkResult(Hands player, Hands computer) internal pure returns(okay) {
         // draw
-        if (player == computer) { return Results.Draw; }
+        if (player == computer) { return okay.Draw; }
 
         // win
-        if (player == Hands.Rock && computer == Hands.Scissors) { return Results.Win; }
-        if (player == Hands.Paper && computer == Hands.Rock) { return Results.Win; }
-        if (player == Hands.Scissors && computer == Hands.Paper) { return Results.Win; }
+        if (player == Hands.Rock && computer == Hands.Scissors) { return okay.Win; }
+        if (player == Hands.Paper && computer == Hands.Rock) { return okay.Win; }
+        if (player == Hands.Scissors && computer == Hands.Paper) { return okay.Win; }
 
         // lose
-        return Results.Lose;
+        return okay.Lose;
     }
 
     // トークンをあげる
